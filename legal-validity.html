@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legal validity of blockchain timestamps | IP Custody</title>
+<meta name="description" content="How blockchain timestamps are treated as evidence: FRE 901 and 902(13)/(14), the 2025 Marseille AZ Factory ruling, eIDAS, and the limits of what a Certificate of Existence proves.">
+<meta name="theme-color" content="#0A2540">
+<link rel="canonical" href="https://ipcustodyinc.github.io/ipcustody-site/legal-validity.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IP Custody">
+<meta property="og:title" content="Legal validity of blockchain timestamps | IP Custody">
+<meta property="og:description" content="How blockchain timestamps are treated as evidence: FRE 901 and 902(13)/(14), the 2025 Marseille AZ Factory ruling, eIDAS, and the limits of what a Certificate of Existence proves.">
+<meta property="og:url" content="https://ipcustodyinc.github.io/ipcustody-site/legal-validity.html">
+<meta property="og:image" content="https://ipcustodyinc.github.io/ipcustody-site/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Legal validity of blockchain timestamps | IP Custody">
+<meta name="twitter:description" content="How blockchain timestamps are treated as evidence: FRE 901 and 902(13)/(14), the 2025 Marseille AZ Factory ruling, eIDAS, and the limits of what a Certificate of Existence proves.">
+<meta name="twitter:image" content="https://ipcustodyinc.github.io/ipcustody-site/assets/og-image.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="notice" role="note"><strong>Early access.</strong> IP Custody is not live yet. Features and prices on this site describe the planned service and may change. <a href="legal.html">Read the disclaimer</a>.</div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="IP Custody home"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="14" fill="#0A2540"/><path d="M32 9 13 16v14c0 12.4 8.1 21.7 19 25 10.9-3.3 19-12.6 19-25V16L32 9z" fill="none" stroke="#00F5FF" stroke-width="3.5" stroke-linejoin="round"/><path d="M23 33l6 6 12-13" fill="none" stroke="#00F5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>IP <b>Custody</b></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li><li><a href="how-it-works.html">How it works</a></li><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="certificate.html">Certificate</a></li><li><a href="compare.html">Compare</a></li><li><a href="legal-validity.html" aria-current="page">Legal validity</a></li><li><a href="law-firms.html">Law firms</a></li><li><a href="faq.html">FAQ</a></li><li class="nav-cta"><a href="mailto:support@ipcustody.com?subject=Early%20access">Join early access</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero"><div class="wrap"><span class="eyebrow">Legal validity</span><h1>How blockchain timestamps are treated as evidence</h1><p>An overview of the rules and decisions IP Custody's evidence design is based on. It is general information, not legal advice. Laws differ by jurisdiction and change over time.</p></div></section>
+<section class="band"><div class="wrap">
+  <div class="callout info"><p><strong>Short answer.</strong> IP Custody certificates are designed to serve as evidence of a file's existence and creation date, and to support authentication of digital evidence. They are not a patent or a registered copyright. They are meant to be a low-cost, immediate first layer of proof. Whether a record is admitted in a particular case, and how much weight it gets, is always up to the court.</p></div>
+
+  <h2 class="mt2">The legal landscape</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th scope="col">Jurisdiction</th><th scope="col">Rule or decision</th><th scope="col">What it means for timestamp evidence</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">United States: authentication</th><td><strong>Federal Rule of Evidence 901</strong></td><td>Evidence must be shown to be what it claims to be. A matching SHA-256 hash plus a public blockchain record and a custodian record are designed to support that showing.</td></tr>
+      <tr><th scope="row">United States: self-authentication</th><td><strong>FRE 902(13) and 902(14)</strong></td><td>Allow certain machine-generated electronic records, and data copied from devices or files (often identified by hash values), to be authenticated with a certification from a qualified person instead of live testimony, if the rule's notice and certification requirements are met.</td></tr>
+      <tr><th scope="row">United States: case law</th><td><strong>United States v. Sterlingov</strong> (D.D.C. 2024)</td><td>A federal court admitted blockchain-analysis evidence after a Daubert challenge. The case was about tracing Bitcoin transactions, not timestamping, but it shows federal courts engaging with blockchain-derived evidence.</td></tr>
+      <tr><th scope="row">United States: state statutes</th><td>Vermont, Arizona, Delaware, Illinois</td><td>These states have passed laws that address blockchain records and signatures.</td></tr>
+      <tr><th scope="row">France</th><td><strong>Tribunal judiciaire de Marseille, 20 March 2025</strong> (RG 23/00046, AZ Factory v. Valeria Moda)</td><td>In a fashion copyright infringement case, the court relied on Bitcoin-anchored blockchain timestamp reports (made through a third-party timestamping service and verified by a court bailiff), together with evidence of public disclosure, to establish the claimant's copyright ownership from the recorded dates. <a href="https://www.euipo.europa.eu/fr/law/recent-case-law/he-court-of-marseille-recognised-blockchain-timestamping-as-legitimate-evidence-of-copyright-ownership" rel="noopener">EUIPO case summary</a>.</td></tr>
+      <tr><th scope="row">European Union</th><td><strong>eIDAS / eIDAS 2</strong></td><td>Qualified electronic timestamps from qualified trust service providers benefit from a legal presumption of accuracy. Other electronic timestamps may not be denied legal effect just because they are electronic. IP Custody is not a qualified trust service provider.</td></tr>
+      <tr><th scope="row">China</th><td><strong>Hangzhou Internet Court</strong> (2018)</td><td>Accepted blockchain-preserved evidence in a copyright dispute. The decision is still widely cited.</td></tr>
+      <tr><th scope="row">Italy</th><td>2019 legislation</td><td>Recognized the legal effect of timestamps on distributed ledgers.</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small muted">Case and statute descriptions are summaries for general information. Check current law with an attorney in your jurisdiction.</p>
+</div></section>
+
+<section class="band alt"><div class="wrap">
+  <div class="grid g2">
+    <div>
+      <h2>How the certificate is designed to support evidence</h2>
+      <ol>
+        <li><strong>Public blockchain anchor.</strong> Planned anchoring to Bitcoin via OpenTimestamps, with optional checkpoints on Ethereum, Polygon or Solana.</li>
+        <li><strong>Custodian record.</strong> A plain statement from IP Custody's custodian of what was received and when.</li>
+        <li><strong>Full evidence package.</strong> Certificate, hash-verification instructions, blockchain explorer link, chain-of-custody log and a QR code to verification.</li>
+        <li><strong>Built to be corroborated.</strong> Designed to sit alongside your other evidence (NDAs, emails, version history, disclosures), the same kind of body of evidence the Marseille court relied on.</li>
+      </ol>
+    </div>
+    <div>
+      <h2>Important limitations</h2>
+      <ul>
+        <li>Certificates prove existence and date, not ownership. You still need to show you created the work.</li>
+        <li>Admissibility is always up to the judge, and the weight given depends on the circumstances.</li>
+        <li>They work best combined with other evidence (NDAs, emails, version history, etc.).</li>
+        <li>They don't replace formal copyright registration or patent and trademark filings. They are the first layer.</li>
+        <li>Until a certificate's chain binding is confirmed, it is an internal record, not a blockchain-anchored one.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <h2>Related laws referenced across IP Custody materials</h2>
+  <div class="grid g3">
+    <div class="card"><h3>17 U.S.C. § 102</h3><p>Copyright protects original works of authorship fixed in a tangible medium. Protection starts automatically at fixation, and registration unlocks key remedies.</p></div>
+    <div class="card"><h3>35 U.S.C. §§ 102 / 103</h3><p>Novelty and non-obviousness requirements for patents. The U.S. is a first-inventor-to-file system, so filing dates matter. Records of conception can still matter, for example in derivation disputes.</p></div>
+    <div class="card"><h3>DTSA / UTSA</h3><p>The Defend Trade Secrets Act (18 U.S.C. § 1836 et seq.) and state Uniform Trade Secrets Acts protect information kept secret through reasonable measures.</p></div>
+  </div>
+  <div class="callout"><p><strong>Standard disclaimer.</strong> IP Custody certificates provide evidentiary support for creation date and integrity. They are not legal advice and do not replace professional legal counsel or formal IP registrations. Admissibility is subject to court discretion.</p></div>
+</div></section>
+<section class="band"><div class="wrap"><div class="cta-band">
+<div><h2>Build your evidence trail early</h2><p>The best time to record an idea is the day it exists. Join early access to hear when accounts open.</p></div>
+<div class="btns" style="margin-top:0"><a class="btn btn-primary" href="mailto:support@ipcustody.com?subject=Early%20access">Join early access</a><a class="btn btn-ghost" href="pricing.html">See pricing</a></div>
+</div></div></section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="IP Custody home"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="14" fill="#0A2540"/><path d="M32 9 13 16v14c0 12.4 8.1 21.7 19 25 10.9-3.3 19-12.6 19-25V16L32 9z" fill="none" stroke="#00F5FF" stroke-width="3.5" stroke-linejoin="round"/><path d="M23 33l6 6 12-13" fill="none" stroke="#00F5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>IP <b>Custody</b></span></a>
+        <p class="mt2">Day-0 evidence of existence for your ideas, code, designs and inventions. Timestamp first, then file the formal protections worth filing.</p>
+        <p><a href="mailto:support@ipcustody.com">support@ipcustody.com</a></p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="certificate.html">Sample certificate</a></li>
+          <li><a href="toolkit.html">Legal Toolkit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Learn</h2>
+        <ul>
+          <li><a href="playbook.html">IP Protection Playbook</a></li>
+          <li><a href="compare.html">Comparisons</a></li>
+          <li><a href="legal-validity.html">Legal validity</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="law-firms.html">For law firms</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="legal.html">Disclaimer, Terms &amp; Privacy</a></li>
+          <li><a href="mailto:support@ipcustody.com?subject=Early%20access">Join early access</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p><strong>Not legal advice.</strong> IP Custody provides technical evidence and record-keeping tools. It does not replace patent, copyright or trademark registration, and it does not replace advice from a qualified attorney. Whether and how any record is used as evidence is decided by the court.</p>
+      <p>&copy; <span id="year">2026</span> IP Custody, Inc. All rights reserved. This site uses no cookies, analytics or trackers.</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

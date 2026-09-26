@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it works: hashing & blockchain timestamps | IP Custody</title>
+<meta name="description" content="How IP Custody turns a file into a SHA-256 fingerprint, anchors it with Merkle trees and OpenTimestamps, and lets anyone verify it. Try hashing a file locally in your browser.">
+<meta name="theme-color" content="#0A2540">
+<link rel="canonical" href="https://ipcustodyinc.github.io/ipcustody-site/how-it-works.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IP Custody">
+<meta property="og:title" content="How it works: hashing & blockchain timestamps | IP Custody">
+<meta property="og:description" content="How IP Custody turns a file into a SHA-256 fingerprint, anchors it with Merkle trees and OpenTimestamps, and lets anyone verify it. Try hashing a file locally in your browser.">
+<meta property="og:url" content="https://ipcustodyinc.github.io/ipcustody-site/how-it-works.html">
+<meta property="og:image" content="https://ipcustodyinc.github.io/ipcustody-site/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How it works: hashing & blockchain timestamps | IP Custody">
+<meta name="twitter:description" content="How IP Custody turns a file into a SHA-256 fingerprint, anchors it with Merkle trees and OpenTimestamps, and lets anyone verify it. Try hashing a file locally in your browser.">
+<meta name="twitter:image" content="https://ipcustodyinc.github.io/ipcustody-site/assets/og-image.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="notice" role="note"><strong>Early access.</strong> IP Custody is not live yet. Features and prices on this site describe the planned service and may change. <a href="legal.html">Read the disclaimer</a>.</div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="IP Custody home"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="14" fill="#0A2540"/><path d="M32 9 13 16v14c0 12.4 8.1 21.7 19 25 10.9-3.3 19-12.6 19-25V16L32 9z" fill="none" stroke="#00F5FF" stroke-width="3.5" stroke-linejoin="round"/><path d="M23 33l6 6 12-13" fill="none" stroke="#00F5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>IP <b>Custody</b></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li><li><a href="how-it-works.html" aria-current="page">How it works</a></li><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="certificate.html">Certificate</a></li><li><a href="compare.html">Compare</a></li><li><a href="legal-validity.html">Legal validity</a></li><li><a href="law-firms.html">Law firms</a></li><li><a href="faq.html">FAQ</a></li><li class="nav-cta"><a href="mailto:support@ipcustody.com?subject=Early%20access">Join early access</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero"><div class="wrap"><span class="eyebrow">How it works</span><h1>Hashing, timestamps and independent verification</h1><p>The core technology behind IP Custody, explained in plain language first and then in detail. You can also fingerprint a file right here in your browser.</p></div></section>
+<section class="band"><div class="wrap">
+  <div class="grid g2">
+    <div>
+      <h2>The simple version</h2>
+      <p>Say you've made something: a sketch, a song, AI art, code or a business idea. You want to be able to show that you had this exact thing on this exact date.</p>
+      <p>Emailing it to yourself, saving a dated file or visiting a notary are easy to dispute or lose. Blockchain timestamping is harder to dispute.</p>
+      <p>Your file gets a unique digital fingerprint: a SHA-256 hash, a short string of letters and numbers. That fingerprint, not your file, is sent to a public blockchain, which records when it arrived. Later, anyone can recompute the fingerprint from your file and check it against the public record. IP Custody can't quietly change or delete that record.</p>
+    </div>
+    <div class="card">
+      <h3>The process in three parts</h3>
+      <ol>
+        <li><strong>Hashing.</strong> Your file (document, image, code, etc.) is turned into a unique cryptographic fingerprint. Even one tiny change creates a completely different hash.</li>
+        <li><strong>Blockchain recording.</strong> The hash is recorded on a public blockchain with a timestamp. Public blockchain records are designed so they can't be changed after the fact.</li>
+        <li><strong>Verification.</strong> Anyone can compare your file's current hash with the blockchain record. If they match, the file existed unchanged at that time.</li>
+      </ol>
+      <p class="small muted">Why it matters: the record is tamper-evident, anyone can check it independently, and your original file stays private.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="band alt"><div class="wrap">
+  <h2>Step by step: what happens to your file</h2>
+  <ol class="steps">
+    <li><h3>Hashing</h3><p>Your file, whatever its size, goes through a one-way function and comes out as a fixed-length 64-character hash.</p></li>
+    <li><h3>Anchoring</h3><p>Your hash is batched with many others into a Merkle tree, and only the tree's root goes into a blockchain transaction.</p></li>
+    <li><h3>Timestamping</h3><p>Once the block is confirmed, its time becomes part of the permanent public ledger.</p></li>
+    <li><h3>Proof</h3><p>You keep a compact proof: your hash, the Merkle path (sibling hashes) and the block reference.</p></li>
+    <li><h3>Verification</h3><p>Anyone can recompute the hash, climb the Merkle path and compare it with the on-chain root. No need to trust IP Custody.</p></li>
+  </ol>
+  <div class="callout info"><p><strong>Privacy by design.</strong> Your original file is never put on-chain. Confidential IP stays off-chain in your vault or on your own device, and only a cryptographic commitment (a hash or Merkle root) is anchored.</p></div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="grid g2">
+    <div>
+      <h2>Merkle trees, briefly</h2>
+      <p>A Merkle tree is how many fingerprints fit into a single blockchain entry. Each file's hash is a leaf. Pairs of hashes are hashed together, level by level, until one <strong>Merkle root</strong> remains. Only that root is anchored.</p>
+      <p>To prove your file was included, you only need your leaf plus a few sibling hashes (the <strong>Merkle proof</strong>). Change one character in your file and the leaf changes, so the whole path changes and the root no longer matches.</p>
+      <p>Proofs stay small: a tree with a million leaves needs only about 20 sibling hashes (log₂ 1,000,000 ≈ 20).</p>
+    </div>
+    <div>
+      <pre class="diagram" aria-label="Merkle tree diagram">              MERKLE ROOT  ──►  blockchain anchor
+               /        \
+          H(1,2)        H(3,4)
+          /    \        /    \
+        H1      H2    H3      H4
+        │       │     │       │
+      file1   file2  YOUR    file4
+                     FILE
+Proof for your file = H3 + H4 + H(1,2)</pre>
+    </div>
+  </div>
+</div></section>
+
+<section class="band alt"><div class="wrap">
+  <h2>Anchoring: OpenTimestamps, Bitcoin and other networks</h2>
+  <div class="grid g2">
+    <div>
+      <p><strong>OpenTimestamps (OTS)</strong> is an open, vendor-neutral protocol for provable blockchain timestamps, created in 2016 by Bitcoin Core developer Peter Todd. You hash your file locally, public calendar servers aggregate many hashes into a Merkle tree, and the root is committed to Bitcoin (for example in an <code>OP_RETURN</code> output). You keep a small <code>.ots</code> proof file. It can be checked against any Bitcoin node or block explorer, even if the calendar server or IP Custody no longer exists.</p>
+      <p>The current IP Custody prototype prepares anchors along exactly this route: <strong>Bitcoin OP_RETURN / OpenTimestamps</strong>. A certificate stays marked <strong>UNBOUND</strong> until a transaction has actually been confirmed. We never make up a transaction ID.</p>
+    </div>
+    <div>
+      <h3>Planned hybrid architecture</h3>
+      <ul>
+        <li><strong>Fast layer:</strong> quick anchoring on a high-speed network such as Polygon, so the certificate arrives quickly.</li>
+        <li><strong>Security layer:</strong> periodic aggregate Merkle roots committed to Bitcoin via OpenTimestamps for long-term verifiability.</li>
+        <li><strong>Multi-chain checkpoints (higher tiers):</strong> one evidence-set Merkle root anchored on Ethereum, Polygon, Solana and/or Bitcoin. For each checkpoint the system records the chain, transaction ID, block reference, timestamp, root hash, evidence manifest and verification state.</li>
+      </ul>
+      <div class="table-wrap"><table>
+        <thead><tr><th scope="col">Aspect</th><th scope="col">OpenTimestamps (Bitcoin)</th><th scope="col">Fast network (e.g. Polygon)</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Trust required</th><td>Extremely low</td><td>Low</td></tr>
+          <tr><th scope="row">Speed</th><td>Minutes to hours</td><td>Seconds</td></tr>
+          <tr><th scope="row">Long-term verifiability</th><td>Highest</td><td>High</td></tr>
+          <tr><th scope="row">Cost</th><td>Very low (batched)</td><td>Very low</td></tr>
+          <tr><th scope="row">Open standard</th><td>Yes</td><td>Network-specific</td></tr>
+          <tr><th scope="row">Role at IP Custody</th><td>Long-term security anchor</td><td>Day-to-day speed</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <h2>The cryptographic evidence chain</h2>
+  <ul class="flow"><li>Artifact</li><li>Hash</li><li>Event</li><li>Evidence manifest</li><li>Merkle tree</li><li>Merkle root</li><li>Blockchain anchor</li></ul>
+  <p>Every significant action (upload, new version, search, snapshot, certificate) can be written as a standard evidence event with an ID, actor, action, project, artifact, timestamp, source, agent and version, input/output references, hash, evidence ID and system version. You get one consistent provenance record across every tier.</p>
+  <div class="callout"><p><strong>Evidence, not legal conclusions.</strong> IP Custody records that a file or action was captured at a certain time. That is separate from legal conclusions such as ownership, inventorship, novelty, patentability, infringement or enforceability. Those are for you, your attorney and the courts.</p></div>
+</div></section>
+
+<section class="band alt" id="demo"><div class="wrap">
+  <div class="section-head"><span class="eyebrow" style="color:var(--teal)">Try it</span><h2>Hash a file in your browser</h2>
+  <p>This demo computes a SHA-256 fingerprint <strong>locally on your device</strong> with your browser's built-in Web Crypto API. <strong>Your file is not uploaded, stored or sent anywhere,</strong> and nothing is written to a blockchain. It only shows what the first step looks like.</p></div>
+  <div class="demo" id="hash-demo">
+    <div class="grid g2">
+      <div>
+        <div class="drop" id="demo-drop">
+          <label for="demo-file">Choose a file (or drag one here)</label>
+          <input type="file" id="demo-file">
+          <p class="small muted" style="margin:.6em 0 0">Files are read in memory in this tab only. Up to 1 GB.</p>
+        </div>
+        <label for="demo-text">…or type some text</label>
+        <textarea id="demo-text">My invention idea, version 1</textarea>
+        <div class="btns" style="margin-top:.6em"><button type="button" class="btn btn-navy" id="demo-text-btn">Hash this text</button></div>
+      </div>
+      <div>
+        <p class="mb0"><strong>SHA-256 fingerprint</strong></p>
+        <div class="hash-out" id="demo-hash" aria-live="polite">—</div>
+        <p class="demo-meta" id="demo-meta">No input yet.</p>
+        <div class="btns" style="margin-top:.4em"><button type="button" class="btn btn-outline" id="demo-copy" disabled>Copy fingerprint</button></div>
+        <p class="small" id="demo-status" role="status" aria-live="polite">Ready. Nothing leaves your device.</p>
+        <p class="small muted">Try it: hash some text, change one letter, and hash it again. The fingerprint changes completely. That's what makes it a reliable way to spot tampering.</p>
+      </div>
+    </div>
+    <p class="small muted mt2 mb0">Demo only: not a registration, not a certificate, not a chain write and not legal advice. Adapted from the IP Custody Seven-Day prototype.</p>
+  </div>
+</div></section>
+<section class="band"><div class="wrap"><div class="cta-band">
+<div><h2>Ready for your first record?</h2><p>Join early access to be notified when accounts open. You'll start with the first evidence package: custody record, SHA-256 fingerprint, timestamp, certificate and toolkit.</p></div>
+<div class="btns" style="margin-top:0"><a class="btn btn-primary" href="mailto:support@ipcustody.com?subject=Early%20access">Join early access</a><a class="btn btn-ghost" href="pricing.html">See pricing</a></div>
+</div></div></section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="IP Custody home"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="14" fill="#0A2540"/><path d="M32 9 13 16v14c0 12.4 8.1 21.7 19 25 10.9-3.3 19-12.6 19-25V16L32 9z" fill="none" stroke="#00F5FF" stroke-width="3.5" stroke-linejoin="round"/><path d="M23 33l6 6 12-13" fill="none" stroke="#00F5FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>IP <b>Custody</b></span></a>
+        <p class="mt2">Day-0 evidence of existence for your ideas, code, designs and inventions. Timestamp first, then file the formal protections worth filing.</p>
+        <p><a href="mailto:support@ipcustody.com">support@ipcustody.com</a></p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="certificate.html">Sample certificate</a></li>
+          <li><a href="toolkit.html">Legal Toolkit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Learn</h2>
+        <ul>
+          <li><a href="playbook.html">IP Protection Playbook</a></li>
+          <li><a href="compare.html">Comparisons</a></li>
+          <li><a href="legal-validity.html">Legal validity</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="law-firms.html">For law firms</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="legal.html">Disclaimer, Terms &amp; Privacy</a></li>
+          <li><a href="mailto:support@ipcustody.com?subject=Early%20access">Join early access</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p><strong>Not legal advice.</strong> IP Custody provides technical evidence and record-keeping tools. It does not replace patent, copyright or trademark registration, and it does not replace advice from a qualified attorney. Whether and how any record is used as evidence is decided by the court.</p>
+      <p>&copy; <span id="year">2026</span> IP Custody, Inc. All rights reserved. This site uses no cookies, analytics or trackers.</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
