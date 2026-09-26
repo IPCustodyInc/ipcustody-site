@@ -4,21 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How it works: hashing & blockchain timestamps | IP Custody</title>
-<meta name="description" content="How IP Custody turns a file into a SHA-256 fingerprint, anchors it with Merkle trees and OpenTimestamps, and lets anyone verify it. Try hashing a file locally in your browser.">
+<meta name="description" content="How IP Custody turns a file into a SHA-256 fingerprint, anchors it with Merkle trees and OpenTimestamps, and lets anyone verify it. Try the free Hash &amp; Proof Tool.">
 <meta name="theme-color" content="#0A2540">
 <link rel="canonical" href="https://ipcustodyinc.github.io/ipcustody-site/how-it-works.html">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="IP Custody">
 <meta property="og:title" content="How it works: hashing & blockchain timestamps | IP Custody">
-<meta property="og:description" content="How IP Custody turns a file into a SHA-256 fingerprint, anchors it with Merkle trees and OpenTimestamps, and lets anyone verify it. Try hashing a file locally in your browser.">
+<meta property="og:description" content="How IP Custody turns a file into a SHA-256 fingerprint, anchors it with Merkle trees and OpenTimestamps, and lets anyone verify it. Try the free Hash &amp; Proof Tool.">
 <meta property="og:url" content="https://ipcustodyinc.github.io/ipcustody-site/how-it-works.html">
 <meta property="og:image" content="https://ipcustodyinc.github.io/ipcustody-site/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="How it works: hashing & blockchain timestamps | IP Custody">
-<meta name="twitter:description" content="How IP Custody turns a file into a SHA-256 fingerprint, anchors it with Merkle trees and OpenTimestamps, and lets anyone verify it. Try hashing a file locally in your browser.">
+<meta name="twitter:description" content="How IP Custody turns a file into a SHA-256 fingerprint, anchors it with Merkle trees and OpenTimestamps, and lets anyone verify it. Try the free Hash &amp; Proof Tool.">
 <meta name="twitter:image" content="https://ipcustodyinc.github.io/ipcustody-site/assets/og-image.png">
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -31,13 +31,13 @@
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul>
-        <li><a href="index.html">Home</a></li><li><a href="how-it-works.html" aria-current="page">How it works</a></li><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="certificate.html">Certificate</a></li><li><a href="compare.html">Compare</a></li><li><a href="legal-validity.html">Legal validity</a></li><li><a href="law-firms.html">Law firms</a></li><li><a href="faq.html">FAQ</a></li><li class="nav-cta"><a href="mailto:support@ipcustody.com?subject=Early%20access">Join early access</a></li>
+        <li><a href="index.html">Home</a></li><li><a href="how-it-works.html" aria-current="page">How it works</a></li><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="prior-art.html">Prior art search</a></li><li><a href="proof-tool.html">Proof tool</a></li><li><a href="certificate.html">Certificate</a></li><li><a href="law-firms.html">Law firms</a></li><li><a href="faq.html">FAQ</a></li><li class="nav-cta"><a href="mailto:support@ipcustody.com?subject=Early%20access%20request&amp;body=Hi%20IP%20Custody%2C%0D%0A%0D%0AI%27d%20like%20to%20join%20the%20early-access%20list.%0D%0A%0D%0APlan%20I%27m%20interested%20in%20%28SEED%2C%20FORGE%2C%20ATLAS%2C%20SENTINEL%2C%20VAULT%2C%20SOVEREIGN%20or%20not%20sure%29%3A%20%0D%0AWhat%20I%20create%20%28general%20category%20only%2C%20please%20no%20confidential%20details%29%3A%20%0D%0A%0D%0AThanks%2C%0D%0A">Join early access</a></li>
       </ul>
     </nav>
   </div>
 </header>
 <main id="main">
-<section class="page-hero"><div class="wrap"><span class="eyebrow">How it works</span><h1>Hashing, timestamps and independent verification</h1><p>The core technology behind IP Custody, explained in plain language first and then in detail. You can also fingerprint a file right here in your browser.</p></div></section>
+<section class="page-hero"><div class="wrap"><span class="eyebrow">How it works</span><h1>Hashing, timestamps and independent verification</h1><p>The core technology behind IP Custody, explained in plain language first and then in detail. You can also fingerprint a file in your browser with the free <a href='proof-tool.html' style='color:#fff'>Hash &amp; Proof Tool</a>.</p></div></section>
 <section class="band"><div class="wrap">
   <div class="grid g2">
     <div>
@@ -124,40 +124,20 @@ Proof for your file = H3 + H4 + H(1,2)</pre>
 <section class="band"><div class="wrap">
   <h2>The cryptographic evidence chain</h2>
   <ul class="flow"><li>Artifact</li><li>Hash</li><li>Event</li><li>Evidence manifest</li><li>Merkle tree</li><li>Merkle root</li><li>Blockchain anchor</li></ul>
-  <p>Every significant action (upload, new version, search, snapshot, certificate) can be written as a standard evidence event with an ID, actor, action, project, artifact, timestamp, source, agent and version, input/output references, hash, evidence ID and system version. You get one consistent provenance record across every tier.</p>
+  <p>Every significant action (upload, new version, search, snapshot, certificate) can be written as a standard evidence event with an ID, actor, action, project, artifact, timestamp, source, tool and version, input/output references, hash, evidence ID and system version. You get one consistent provenance record across every tier.</p>
   <div class="callout"><p><strong>Evidence, not legal conclusions.</strong> IP Custody records that a file or action was captured at a certain time. That is separate from legal conclusions such as ownership, inventorship, novelty, patentability, infringement or enforceability. Those are for you, your attorney and the courts.</p></div>
 </div></section>
 
 <section class="band alt" id="demo"><div class="wrap">
-  <div class="section-head"><span class="eyebrow" style="color:var(--teal)">Try it</span><h2>Hash a file in your browser</h2>
-  <p>This demo computes a SHA-256 fingerprint <strong>locally on your device</strong> with your browser's built-in Web Crypto API. <strong>Your file is not uploaded, stored or sent anywhere,</strong> and nothing is written to a blockchain. It only shows what the first step looks like.</p></div>
-  <div class="demo" id="hash-demo">
-    <div class="grid g2">
-      <div>
-        <div class="drop" id="demo-drop">
-          <label for="demo-file">Choose a file (or drag one here)</label>
-          <input type="file" id="demo-file">
-          <p class="small muted" style="margin:.6em 0 0">Files are read in memory in this tab only. Up to 1 GB.</p>
-        </div>
-        <label for="demo-text">…or type some text</label>
-        <textarea id="demo-text">My invention idea, version 1</textarea>
-        <div class="btns" style="margin-top:.6em"><button type="button" class="btn btn-navy" id="demo-text-btn">Hash this text</button></div>
-      </div>
-      <div>
-        <p class="mb0"><strong>SHA-256 fingerprint</strong></p>
-        <div class="hash-out" id="demo-hash" aria-live="polite">—</div>
-        <p class="demo-meta" id="demo-meta">No input yet.</p>
-        <div class="btns" style="margin-top:.4em"><button type="button" class="btn btn-outline" id="demo-copy" disabled>Copy fingerprint</button></div>
-        <p class="small" id="demo-status" role="status" aria-live="polite">Ready. Nothing leaves your device.</p>
-        <p class="small muted">Try it: hash some text, change one letter, and hash it again. The fingerprint changes completely. That's what makes it a reliable way to spot tampering.</p>
-      </div>
-    </div>
-    <p class="small muted mt2 mb0">Demo only: not a registration, not a certificate, not a chain write and not legal advice. Adapted from the IP Custody Seven-Day prototype.</p>
+  <div class="section-head"><span class="eyebrow" style="color:var(--teal)">Try it</span><h2>Free tools for the first steps</h2></div>
+  <div class="grid g2">
+    <div class="card"><h3>Hash &amp; Proof Tool</h3><p>See step 1 for yourself: compute a SHA-256 fingerprint of a file or text <strong>locally on your device</strong>, download a self-generated hash receipt, and verify a file against a hash later. Nothing is uploaded and nothing is written to a blockchain.</p><a class="btn btn-navy" href="proof-tool.html">Open the proof tool</a></div>
+    <div class="card"><h3>Prior Art Search</h3><p>Before you file, look for what already exists. Enter your idea once and open the search on free public patent, research, trademark and copyright databases.</p><a class="btn btn-navy" href="prior-art.html">Search prior art</a></div>
   </div>
 </div></section>
 <section class="band"><div class="wrap"><div class="cta-band">
 <div><h2>Ready for your first record?</h2><p>Join early access to be notified when accounts open. You'll start with the first evidence package: custody record, SHA-256 fingerprint, timestamp, certificate and toolkit.</p></div>
-<div class="btns" style="margin-top:0"><a class="btn btn-primary" href="mailto:support@ipcustody.com?subject=Early%20access">Join early access</a><a class="btn btn-ghost" href="pricing.html">See pricing</a></div>
+<div class="btns" style="margin-top:0"><a class="btn btn-primary" href="mailto:support@ipcustody.com?subject=Early%20access%20request&amp;body=Hi%20IP%20Custody%2C%0D%0A%0D%0AI%27d%20like%20to%20join%20the%20early-access%20list.%0D%0A%0D%0APlan%20I%27m%20interested%20in%20%28SEED%2C%20FORGE%2C%20ATLAS%2C%20SENTINEL%2C%20VAULT%2C%20SOVEREIGN%20or%20not%20sure%29%3A%20%0D%0AWhat%20I%20create%20%28general%20category%20only%2C%20please%20no%20confidential%20details%29%3A%20%0D%0A%0D%0AThanks%2C%0D%0A">Join early access</a><a class="btn btn-ghost" href="pricing.html">See pricing</a></div>
 </div></div></section>
 
 </main>
@@ -175,6 +155,8 @@ Proof for your file = H3 + H4 + H(1,2)</pre>
           <li><a href="how-it-works.html">How it works</a></li>
           <li><a href="features.html">Features</a></li>
           <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="prior-art.html">Prior Art Search</a></li>
+          <li><a href="proof-tool.html">Hash &amp; Proof Tool</a></li>
           <li><a href="certificate.html">Sample certificate</a></li>
           <li><a href="toolkit.html">Legal Toolkit</a></li>
         </ul>
@@ -195,13 +177,13 @@ Proof for your file = H3 + H4 + H(1,2)</pre>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="legal.html">Disclaimer, Terms &amp; Privacy</a></li>
-          <li><a href="mailto:support@ipcustody.com?subject=Early%20access">Join early access</a></li>
+          <li><a href="mailto:support@ipcustody.com?subject=Early%20access%20request&amp;body=Hi%20IP%20Custody%2C%0D%0A%0D%0AI%27d%20like%20to%20join%20the%20early-access%20list.%0D%0A%0D%0APlan%20I%27m%20interested%20in%20%28SEED%2C%20FORGE%2C%20ATLAS%2C%20SENTINEL%2C%20VAULT%2C%20SOVEREIGN%20or%20not%20sure%29%3A%20%0D%0AWhat%20I%20create%20%28general%20category%20only%2C%20please%20no%20confidential%20details%29%3A%20%0D%0A%0D%0AThanks%2C%0D%0A">Join early access</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-legal">
       <p><strong>Not legal advice.</strong> IP Custody provides technical evidence and record-keeping tools. It does not replace patent, copyright or trademark registration, and it does not replace advice from a qualified attorney. Whether and how any record is used as evidence is decided by the court.</p>
-      <p>&copy; <span id="year">2026</span> IP Custody, Inc. All rights reserved. This site uses no cookies, analytics or trackers.</p>
+      <p>&copy; <span id="year">2026</span> IP Custody. All rights reserved. This site uses no cookies, analytics or trackers.</p>
     </div>
   </div>
 </footer>

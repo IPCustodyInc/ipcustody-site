@@ -31,7 +31,7 @@
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul>
-        <li><a href="index.html">Home</a></li><li><a href="how-it-works.html">How it works</a></li><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="certificate.html" aria-current="page">Certificate</a></li><li><a href="compare.html">Compare</a></li><li><a href="legal-validity.html">Legal validity</a></li><li><a href="law-firms.html">Law firms</a></li><li><a href="faq.html">FAQ</a></li><li class="nav-cta"><a href="mailto:support@ipcustody.com?subject=Early%20access">Join early access</a></li>
+        <li><a href="index.html">Home</a></li><li><a href="how-it-works.html">How it works</a></li><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="prior-art.html">Prior art search</a></li><li><a href="proof-tool.html">Proof tool</a></li><li><a href="certificate.html" aria-current="page">Certificate</a></li><li><a href="law-firms.html">Law firms</a></li><li><a href="faq.html">FAQ</a></li><li class="nav-cta"><a href="mailto:support@ipcustody.com?subject=Early%20access%20request&amp;body=Hi%20IP%20Custody%2C%0D%0A%0D%0AI%27d%20like%20to%20join%20the%20early-access%20list.%0D%0A%0D%0APlan%20I%27m%20interested%20in%20%28SEED%2C%20FORGE%2C%20ATLAS%2C%20SENTINEL%2C%20VAULT%2C%20SOVEREIGN%20or%20not%20sure%29%3A%20%0D%0AWhat%20I%20create%20%28general%20category%20only%2C%20please%20no%20confidential%20details%29%3A%20%0D%0A%0D%0AThanks%2C%0D%0A">Join early access</a></li>
       </ul>
     </nav>
   </div>
@@ -91,15 +91,14 @@
       </ul>
     </div>
     <div>
-      <h2>Design standard</h2>
-      <ul>
-        <li>US Letter (8.5 × 11 in) or A4, 0.75 in margins</li>
-        <li>Navy #0A2540, cyan #00F5FF and a metallic gold #D4AF37 seal on a light #F8F9FA background with a faint blockchain pattern</li>
-        <li>Inter (or Space Grotesk) headings, Inter body text, 9 pt legal fine print</li>
-        <li>Logo top-left, verification QR code top-right, unique certificate ID in bold at the top</li>
-        <li>Metadata table, full-width custodian box, signature block and seal at the bottom</li>
-        <li>Delivered as a printable PDF plus a machine-readable JSON object: one record in two formats</li>
-      </ul>
+      <h2>How to check a certificate</h2>
+      <ol>
+        <li>Get the original file exactly as it was recorded (same bytes, not a re-saved or re-exported copy).</li>
+        <li>Compute its SHA-256 fingerprint. You can do this in the free <a href="proof-tool.html#verify">Hash &amp; Proof Tool</a>, which runs entirely in your browser.</li>
+        <li>Compare it with the content hash on the certificate. Any difference means the file is not the one recorded.</li>
+        <li>Check the chain binding. If it shows a network and transaction ID, look the transaction up on a public block explorer. If it says UNBOUND, there is no blockchain anchor yet.</li>
+      </ol>
+      <p class="small muted">A certificate is delivered as a printable PDF plus a machine-readable JSON record.</p>
     </div>
   </div>
 </div></section>
@@ -119,7 +118,7 @@
 </div></section>
 <section class="band"><div class="wrap"><div class="cta-band">
 <div><h2>Be first in line</h2><p>IP Custody is in early access. Join the list and we will email you when accounts open. No payment is taken today.</p></div>
-<div class="btns" style="margin-top:0"><a class="btn btn-primary" href="mailto:support@ipcustody.com?subject=Early%20access">Join early access</a><a class="btn btn-ghost" href="pricing.html">See pricing</a></div>
+<div class="btns" style="margin-top:0"><a class="btn btn-primary" href="mailto:support@ipcustody.com?subject=Early%20access%20request&amp;body=Hi%20IP%20Custody%2C%0D%0A%0D%0AI%27d%20like%20to%20join%20the%20early-access%20list.%0D%0A%0D%0APlan%20I%27m%20interested%20in%20%28SEED%2C%20FORGE%2C%20ATLAS%2C%20SENTINEL%2C%20VAULT%2C%20SOVEREIGN%20or%20not%20sure%29%3A%20%0D%0AWhat%20I%20create%20%28general%20category%20only%2C%20please%20no%20confidential%20details%29%3A%20%0D%0A%0D%0AThanks%2C%0D%0A">Join early access</a><a class="btn btn-ghost" href="pricing.html">See pricing</a></div>
 </div></div></section>
 </main>
 <footer class="site-footer">
@@ -136,6 +135,8 @@
           <li><a href="how-it-works.html">How it works</a></li>
           <li><a href="features.html">Features</a></li>
           <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="prior-art.html">Prior Art Search</a></li>
+          <li><a href="proof-tool.html">Hash &amp; Proof Tool</a></li>
           <li><a href="certificate.html">Sample certificate</a></li>
           <li><a href="toolkit.html">Legal Toolkit</a></li>
         </ul>
@@ -156,13 +157,13 @@
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="legal.html">Disclaimer, Terms &amp; Privacy</a></li>
-          <li><a href="mailto:support@ipcustody.com?subject=Early%20access">Join early access</a></li>
+          <li><a href="mailto:support@ipcustody.com?subject=Early%20access%20request&amp;body=Hi%20IP%20Custody%2C%0D%0A%0D%0AI%27d%20like%20to%20join%20the%20early-access%20list.%0D%0A%0D%0APlan%20I%27m%20interested%20in%20%28SEED%2C%20FORGE%2C%20ATLAS%2C%20SENTINEL%2C%20VAULT%2C%20SOVEREIGN%20or%20not%20sure%29%3A%20%0D%0AWhat%20I%20create%20%28general%20category%20only%2C%20please%20no%20confidential%20details%29%3A%20%0D%0A%0D%0AThanks%2C%0D%0A">Join early access</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-legal">
       <p><strong>Not legal advice.</strong> IP Custody provides technical evidence and record-keeping tools. It does not replace patent, copyright or trademark registration, and it does not replace advice from a qualified attorney. Whether and how any record is used as evidence is decided by the court.</p>
-      <p>&copy; <span id="year">2026</span> IP Custody, Inc. All rights reserved. This site uses no cookies, analytics or trackers.</p>
+      <p>&copy; <span id="year">2026</span> IP Custody. All rights reserved. This site uses no cookies, analytics or trackers.</p>
     </div>
   </div>
 </footer>
